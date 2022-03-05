@@ -5,4 +5,10 @@
             <class name="com.testqa.desafioapi.healthcheck.HealthCheckTest" />
         </classes>
     </test>
+    <test name="Contract Test">
+        <packages>
+            <package name="com.testqa.desafioapi.contract"/>
+            <package name=""/>
+        </packages>
+    </test>
 </suite>
