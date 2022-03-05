@@ -1,0 +1,166 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "array",
+  "items": [
+    {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "superName": {
+          "type": "string"
+        },
+        "profession": {
+          "type": "string"
+        },
+        "age": {
+          "type": "integer"
+        },
+        "canFly": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": true,
+      "required": [
+        "id",
+        "name",
+        "superName",
+        "profession",
+        "age",
+        "canFly"
+      ]
+    },
+    {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "superName": {
+          "type": "string"
+        },
+        "profession": {
+          "type": "string"
+        },
+        "age": {
+          "type": "integer"
+        },
+        "canFly": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": true,
+      "required": [
+        "id",
+        "name",
+        "superName",
+        "profession",
+        "age",
+        "canFly"
+      ]
+    },
+    {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "superName": {
+          "type": "string"
+        },
+        "profession": {
+          "type": "string"
+        },
+        "age": {
+          "type": "integer"
+        },
+        "canFly": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": true,
+      "required": [
+        "id",
+        "name",
+        "superName",
+        "profession",
+        "age",
+        "canFly"
+      ]
+    },
+    {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "superName": {
+          "type": "string"
+        },
+        "profession": {
+          "type": "string"
+        },
+        "age": {
+          "type": "integer"
+        },
+        "canFly": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": true,
+      "required": [
+        "id",
+        "name",
+        "superName",
+        "profession",
+        "age",
+        "canFly"
+      ]
+    },
+    {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "superName": {
+          "type": "string"
+        },
+        "profession": {
+          "type": "string"
+        },
+        "age": {
+          "type": "integer"
+        },
+        "canFly": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": true,
+      "required": [
+        "id",
+        "name",
+        "superName",
+        "profession",
+        "age",
+        "canFly"
+      ]
+    }
+  ]
+}

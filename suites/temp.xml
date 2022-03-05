@@ -1,8 +1,8 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="Temp Suite" verbose="1">
-    <test name="Health-Check Test">
+    <test name="Temp Test">
         <classes>
-            <class name="com.testqa.desafioapi.healthcheck.TempTest" />
+            <class name="com.testqa.desafioapi.contract.GetSuperHeroContractTest" />
         </classes>
     </test>
     <test name="Contract Test">
