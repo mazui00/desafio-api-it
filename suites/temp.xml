@@ -2,7 +2,7 @@
 <suite name="Temp Suite" verbose="1">
     <test name="Temp Test">
         <classes>
-            <class name="com.testqa.desafioapi.contract.GetSuperHeroContractTest" />
+            <class name="com.testqa.desafioapi.functional.superhero.DeleteSuperHeroTest" />
         </classes>
     </test>
     <test name="Contract Test">

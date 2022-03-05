@@ -1,9 +1,9 @@
-package com.testqa.desafioapi.contract;
+package com.testqa.desafioapi.contract.superhero;
 
 import com.testqa.desafioapi.BaseTest;
-import com.testqa.desafioapi.data.SuperHeroDataProvider;
-import com.testqa.desafioapi.dto.SuperHeroDTO;
-import com.testqa.desafioapi.service.SuperHeroService;
+import com.testqa.desafioapi.data.SuperHeroContractDataProvider;
+import com.testqa.desafioapi.dto.superhero.SuperHeroDTO;
+import com.testqa.desafioapi.service.superhero.SuperHeroService;
 import io.restassured.http.ContentType;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,7 +27,7 @@ public class GetSuperHeroContractTest extends BaseTest {
     @Autowired
     private SuperHeroService superHeroService;
 
-    @Test(dataProvider = "getSuperHeroByIdContract", dataProviderClass = SuperHeroDataProvider.class, priority = 1)
+    @Test(dataProvider = "getSuperHeroByIdContract", dataProviderClass = SuperHeroContractDataProvider.class, priority = 1)
     public void whenGetSuperHeroByIdThenValidateSchema(SuperHeroDTO superHeroDTO){
         superHeroDtoToTest = superHeroService.createSuperHero(superHeroDTO);
         given()

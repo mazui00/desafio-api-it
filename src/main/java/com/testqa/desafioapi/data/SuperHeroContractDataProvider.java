@@ -1,9 +1,9 @@
 package com.testqa.desafioapi.data;
 
-import com.testqa.desafioapi.dto.SuperHeroDTO;
+import com.testqa.desafioapi.dto.superhero.SuperHeroDTO;
 import org.testng.annotations.DataProvider;
 
-public class SuperHeroDataProvider {
+public class SuperHeroContractDataProvider {
 
     @DataProvider(name = "getSuperHeroByIdContract")
     public static Object[][] getSuperHeroByIdContract(){
@@ -12,6 +12,7 @@ public class SuperHeroDataProvider {
                 .superName("you shall not see this")
                 .profession("Wizard")
                 .age(200)
+                .canFly(true)
                 .build();
         return new Object[][]{{superHeroDTO}};
     }
@@ -23,6 +24,7 @@ public class SuperHeroDataProvider {
                 .superName("Batman")
                 .profession("businessman, entrepreneur and philanthropist")
                 .age(50)
+                .canFly(false)
                 .build();
         return new Object[][]{{superHeroDTO}};
     }
@@ -34,11 +36,13 @@ public class SuperHeroDataProvider {
                 .superName("Batman clone")
                 .profession("businessman, entrepreneur and philanthropist clone")
                 .age(50)
+                .canFly(false)
                 .build();
         SuperHeroDTO superHeroDtoToEdit = SuperHeroDTO.builder()
                 .name("T’Challa")
                 .superName("Black Panther")
                 .profession("King of Wakanda")
+                .canFly(true)
                 .age(35)
                 .build();
         return new Object[][]{{superHeroDtoToAdd, superHeroDtoToEdit}};

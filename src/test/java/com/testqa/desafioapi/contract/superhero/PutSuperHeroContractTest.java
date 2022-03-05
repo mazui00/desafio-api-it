@@ -1,9 +1,9 @@
-package com.testqa.desafioapi.contract;
+package com.testqa.desafioapi.contract.superhero;
 
 import com.testqa.desafioapi.BaseTest;
-import com.testqa.desafioapi.data.SuperHeroDataProvider;
-import com.testqa.desafioapi.dto.SuperHeroDTO;
-import com.testqa.desafioapi.service.SuperHeroService;
+import com.testqa.desafioapi.data.SuperHeroContractDataProvider;
+import com.testqa.desafioapi.dto.superhero.SuperHeroDTO;
+import com.testqa.desafioapi.service.superhero.SuperHeroService;
 import io.restassured.http.ContentType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.testng.annotations.AfterClass;
@@ -24,7 +24,7 @@ public class PutSuperHeroContractTest extends BaseTest {
     @Autowired
     SuperHeroService superHeroService;
 
-    @Test(dataProviderClass = SuperHeroDataProvider.class, dataProvider = "putSuperHeroContract")
+    @Test(dataProviderClass = SuperHeroContractDataProvider.class, dataProvider = "putSuperHeroContract")
     public void whenPutSuperHeroThenValidateSchema(SuperHeroDTO superHeroDtoAdd, SuperHeroDTO superHeroDtoToEdit){
         superHeroDtoToTest = superHeroService.createSuperHero(superHeroDtoAdd);
         given()
