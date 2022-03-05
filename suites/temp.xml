@@ -1,0 +1,20 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Temp Suite" verbose="1">
+    <test name="Health-Check Test">
+        <classes>
+            <class name="com.testqa.desafioapi.healthcheck.TempTest" />
+        </classes>
+    </test>
+    <test name="Contract Test">
+        <packages>
+            <package name=""/>
+            <package name=""/>
+        </packages>
+    </test>
+    <test name="Functional Test">
+        <packages>
+            <package name=""/>
+            <package name=""/>
+        </packages>
+    </test>
+</suite>

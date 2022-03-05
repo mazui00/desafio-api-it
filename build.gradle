@@ -1,0 +1,59 @@
+buildscript{
+	ext {
+		testNgVersion = '7.4.0'
+		restAssuredVersion = '4.4.0'
+		schemaValidatorVersion = '4.4.0'
+		extentreportVersion = '1.2.2'
+	}
+}
+plugins {
+	id 'org.springframework.boot' version '2.6.4'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
+	id "io.freefair.lombok" version "6.4.1"
+}
+
+group = 'com.test-qa'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-actuator'
+	implementation 'org.springframework.boot:spring-boot-starter-data-rest'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation "org.testng:testng:${testNgVersion}"
+	implementation "io.rest-assured:rest-assured:${restAssuredVersion}"
+	implementation "io.rest-assured:json-schema-validator:${schemaValidatorVersion}"
+	testImplementation "com.aventstack:extentreports-testng-adapter:${extentreportVersion}"
+}
+
+tasks.named('test') {
+//	useJUnitPlatform()
+	useTestNG(){
+		suites("suites/${testSuite}.xml")
+	}
+
+	testLogging {
+		events "PASSED", "FAILED", "SKIPPED", "STANDARD_OUT", "STANDARD_ERROR"
+		exceptionFormat "FULL"
+		showExceptions true
+		showCauses true
+		showStackTraces true
+
+		afterSuite { desc, result ->
+			if (!desc.parent) { // will match the outermost suite
+				def output = "Results: ${result.resultType} (${result.testCount} tests, ${result.successfulTestCount} passed, ${result.failedTestCount} failed, ${result.skippedTestCount} skipped)"
+				def startItem = '|  ', endItem = '  |'
+				def repeatLength = startItem.length() + output.length() + endItem.length()
+				println('\n' + ('-' * repeatLength) + '\n' + startItem + output + endItem + '\n' + ('-' * repeatLength))
+			}
+		}
+	}
+	systemProperty('spring.profiles.active', "${springProfile}")
+}

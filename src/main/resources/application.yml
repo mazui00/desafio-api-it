@@ -1,0 +1,5 @@
+server:
+  port: 9090
+BASE_URI: http://localhost:8088
+BASE_PATH: /
+HEALTH_CHECK_URI: ${BASE_URI}/actuator/health
