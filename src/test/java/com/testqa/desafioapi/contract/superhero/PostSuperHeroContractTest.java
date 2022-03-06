@@ -1,9 +1,9 @@
-package com.testqa.desafioapi.contract;
+package com.testqa.desafioapi.contract.superhero;
 
 import com.testqa.desafioapi.BaseTest;
-import com.testqa.desafioapi.data.SuperHeroDataProvider;
-import com.testqa.desafioapi.dto.SuperHeroDTO;
-import com.testqa.desafioapi.service.SuperHeroService;
+import com.testqa.desafioapi.data.SuperHeroContractDataProvider;
+import com.testqa.desafioapi.dto.superhero.SuperHeroDTO;
+import com.testqa.desafioapi.service.superhero.SuperHeroService;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.apache.http.HttpStatus;
@@ -26,7 +26,7 @@ public class PostSuperHeroContractTest extends BaseTest {
     @Autowired
     private SuperHeroService superHeroService;
 
-    @Test(dataProviderClass = SuperHeroDataProvider.class, dataProvider = "postSuperHeroContract")
+    @Test(dataProviderClass = SuperHeroContractDataProvider.class, dataProvider = "postSuperHeroContract")
     public void whenPostSuperHeroThenValidateContract(SuperHeroDTO superHeroDTO){
         Response response = given()
                 .contentType(ContentType.JSON)

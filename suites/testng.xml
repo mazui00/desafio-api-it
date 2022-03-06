@@ -7,7 +7,13 @@
     </test>
     <test name="Contract Test">
         <packages>
-            <package name="com.testqa.desafioapi.contract"/>
+            <package name="com.testqa.desafioapi.contract.superhero"/>
+            <package name=""/>
+        </packages>
+    </test>
+    <test name="Functional Test">
+        <packages>
+            <package name="com.testqa.desafioapi.functional.superhero"/>
             <package name=""/>
         </packages>
     </test>
