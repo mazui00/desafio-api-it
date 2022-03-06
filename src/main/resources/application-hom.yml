@@ -1,5 +1,3 @@
-server:
-  port: 9090
-BASE_URI: https://spring-boot-h2-crud.herokuapp.com
+BASE_URI: https://super-heroes-sample-api.herokuapp.com
 BASE_PATH: /
 HEALTH_CHECK_URI: ${BASE_URI}/actuator/health

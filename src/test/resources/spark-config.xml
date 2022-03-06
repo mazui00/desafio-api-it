@@ -18,10 +18,10 @@
         <protocol>https</protocol>
 
         <!-- title of the document -->
-        <documentTitle>Automation: prova-tecnica-api-it</documentTitle>
+        <documentTitle>Automation: desafio-api-it</documentTitle>
 
         <!-- report name - displayed at top-nav -->
-        <reportName>prova-tecnica-api-it</reportName>
+        <reportName>desafio-api-it</reportName>
 
         <!-- custom javascript -->
         <scripts>
